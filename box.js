@@ -2,7 +2,7 @@ class Box {
   constructor() {
     this.ukuran = 50;
     this.pos = createVector(width/2, height/2);
-    this.langkah = 5;
+    this.langkah = 3;
     this.tombolkiri = false;
     this.tombolkanan = false;
     this.tombolatas = false;
@@ -10,23 +10,23 @@ class Box {
   }
   
   tampilkan() {
-    fill(250, 100, 100);
+    fill(139, 5, 0);
     noStroke();
     rectMode(CENTER);
     rect(this.pos.x, this.pos.y, this.ukuran, this.ukuran);
   }
   
   gerak() {
-    if (this.tombolkanan) {
+    if (this.tombolkanan){
       this.pos.x += this.langkah;
     }
-    if (this.tombolkiri) {
+    if (this.tombolkiri){
       this.pos.x -= this.langkah;
     }
-    if (this.tombolatas) {
+    if (this.tombolatas){
       this.pos.y -= this.langkah;
     }
-    if (this.tombolbawah) {
+    if (this.tombolbawah){
       this.pos.y += this.langkah;
     }
   }
